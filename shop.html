@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All Jewellery — Zeenat</title>
+<meta name="description" content="Browse earrings, rings, pendants, bracelets, sets & ethnic jewellery at Zeenat.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce"><strong>Free Shipping</strong> on orders above Rs. 2,000 &nbsp;|&nbsp; Since 2024</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">Zee<span>nat</span></a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="shop.html?cat=earrings">Earrings</a></li>
+        <li><a href="shop.html?cat=rings">Rings</a></li>
+        <li><a href="shop.html?cat=pendants">Pendants</a></li>
+        <li><a href="shop.html?cat=bracelets">Bracelets</a></li>
+        <li><a href="shop.html?cat=sets">Sets</a></li>
+        <li><a href="shop.html?cat=ethnic">Ethnic</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search jewellery...">
+    </div>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-badge" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <p class="breadcrumb"><a href="index.html">Home</a> / <span id="crumbCat">Shop All</span></p>
+  <h1 id="pageTitle">Shop All Jewellery</h1>
+</div>
+
+<section class="section">
+  <div class="filter-bar" id="filterBar"></div>
+  <div class="grid" id="shopGrid"></div>
+</section>
+
+<footer class="site-footer" id="footer"></footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/layout.js"></script>
+<script>
+  function getParam(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  function applyFilters() {
+    const cat = getParam("cat") || "all";
+    const q = (document.getElementById("searchInput").value || "").toLowerCase().trim();
+    let list = PRODUCTS;
+    if (cat !== "all") list = list.filter(p => p.category === cat);
+    if (q) list = list.filter(p => p.name.toLowerCase().includes(q) || categoryLabel(p.category).toLowerCase().includes(q));
+    renderGrid(document.getElementById("shopGrid"), list);
+  }
+
+  function buildFilterBar() {
+    const cat = getParam("cat") || "all";
+    const chips = [{ id: "all", label: "All" }, ...CATEGORIES];
+    document.getElementById("filterBar").innerHTML = chips.map(c => `
+      <a class="filter-chip ${c.id === cat ? "active" : ""}" href="shop.html${c.id === "all" ? "" : "?cat=" + c.id}">${c.label}</a>
+    `).join("");
+
+    document.getElementById("pageTitle").textContent = cat === "all" ? "Shop All Jewellery" : categoryLabel(cat);
+    document.getElementById("crumbCat").textContent = cat === "all" ? "Shop All" : categoryLabel(cat);
+    document.title = (cat === "all" ? "Shop All Jewellery" : categoryLabel(cat)) + " — Zeenat";
+  }
+
+  buildFilterBar();
+  applyFilters();
+  document.getElementById("searchInput").addEventListener("input", applyFilters);
+</script>
+</body>
+</html>
