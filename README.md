@@ -1,4 +1,4 @@
-# Zeenat — Artificial Jewellery Website
+# Zivra — Artificial Jewellery Website
 
 Ye ek pura static website hai (HTML/CSS/JS) — koi backend ya build-step nahi chahiye.
 GitHub Pages par seedha upload karke live kar sakte hain.
@@ -6,7 +6,7 @@ GitHub Pages par seedha upload karke live kar sakte hain.
 ## 📁 File Structure
 
 ```
-zeenat-jewelry/
+Zivra-jewelry/
 ├── index.html          → Homepage
 ├── shop.html            → Sab products / category filter / search
 ├── product.html          → Single product detail (?id=1 wagera se open hota hai)
@@ -21,12 +21,12 @@ zeenat-jewelry/
 
 ## 🚀 GitHub par Upload Kaise Karen
 
-1. GitHub par naya repository banayen (masalan `zeenat-jewelry`).
+1. GitHub par naya repository banayen (masalan `Zivra-jewelry`).
 2. Is poore folder ki files us repository mein upload kar dein (drag & drop bhi chalta hai GitHub ki "Add file → Upload files" se), ya `git push` karen.
 3. Repository ke **Settings → Pages** mein jayen.
 4. "Branch" mein `main` select karen, folder `/ (root)` rakhen, aur Save kar dein.
 5. Kuch minute baad aapki site is link par live ho jayegi:
-   `https://<aapka-username>.github.io/zeenat-jewelry/`
+   `https://<aapka-username>.github.io/Zivra-jewelry/`
 
 ## ✏️ Sabse Zaroori Edits (Apna Store Banane Ke Liye)
 

@@ -1,12 +1,12 @@
 /* ==========================================================================
-   ZEENAT — Site Logic
-   Cart is stored in the browser's localStorage under the key "zeenat_cart".
+   Zivra — Site Logic
+   Cart is stored in the browser's localStorage under the key "Zivra_cart".
    No backend/server is required — this works entirely on GitHub Pages.
    For real checkout, WhatsApp order handoff is used (see WHATSAPP_NUMBER below).
    ========================================================================== */
 
 /* ---- SETTINGS: edit these for your store ---- */
-const STORE_NAME = "Zeenat";
+const STORE_NAME = "Zivra";
 const WHATSAPP_NUMBER = "923001234567"; // <-- apna WhatsApp number yahan daalen (country code ke saath, + nahi)
 const CURRENCY = "Rs. ";
 
@@ -58,14 +58,14 @@ function productImageHTML(product) {
 /* ---------------------------------------------------------------------- */
 function getCart() {
   try {
-    return JSON.parse(localStorage.getItem("zeenat_cart")) || [];
+    return JSON.parse(localStorage.getItem("Zivra_cart")) || [];
   } catch (e) {
     return [];
   }
 }
 
 function saveCart(cart) {
-  localStorage.setItem("zeenat_cart", JSON.stringify(cart));
+  localStorage.setItem("Zivra_cart", JSON.stringify(cart));
   updateCartBadge();
 }
 

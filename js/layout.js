@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="footer-col">
         <h4>Get in Touch</h4>
         <p>WhatsApp: +92 300 1234567<br>
-        Email: hello@zeenat.pk<br>
+        Email: hello@Zivra.pk<br>
         Available 11 AM – 8 PM (Mon–Sat)</p>
       </div>
     </div>
-    <div class="footer-bottom">© ${new Date().getFullYear()} Zeenat. All rights reserved. &nbsp;·&nbsp; Prices shown are in PKR.</div>
+    <div class="footer-bottom">© ${new Date().getFullYear()} Zivra. All rights reserved. &nbsp;·&nbsp; Prices shown are in PKR.</div>
   `;
 });

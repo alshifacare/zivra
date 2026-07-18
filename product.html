@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="pdTitle">Product — Zeenat</title>
-<meta name="description" content="Shop premium artificial jewellery at Zeenat.">
+<title id="pdTitle">Product — Zivra</title>
+<meta name="description" content="Shop premium artificial jewellery at Zivra.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -67,8 +67,8 @@
   const id = parseInt(getParam("id"), 10);
   const product = PRODUCTS.find(p => p.id === id) || PRODUCTS[0];
 
-  document.title = product.name + " — Zeenat";
-  document.getElementById("pdTitle").textContent = product.name + " — Zeenat";
+  document.title = product.name + " — Zivra";
+  document.getElementById("pdTitle").textContent = product.name + " — Zivra";
   document.getElementById("crumbCat").textContent = categoryLabel(product.category);
   document.getElementById("crumbCat").href = "shop.html?cat=" + product.category;
   document.getElementById("crumbName").textContent = product.name;
@@ -109,7 +109,7 @@
   document.getElementById("qtyPlus").addEventListener("click", () => { qty += 1; qtyInput.value = qty; });
   document.getElementById("addBtn").addEventListener("click", () => addToCart(product.id, qty));
 
-  const waMsg = encodeURIComponent(`Hi Zeenat! I'd like to order: ${product.name} (Qty: ${qty}) — ${CURRENCY}${product.price.toLocaleString()}`);
+  const waMsg = encodeURIComponent(`Hi Zivra! I'd like to order: ${product.name} (Qty: ${qty}) — ${CURRENCY}${product.price.toLocaleString()}`);
   document.getElementById("waBtn").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}`;
 
   const related = PRODUCTS.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);

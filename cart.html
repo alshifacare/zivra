@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Cart — Zeenat</title>
+<title>Your Cart — Zivra</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -88,7 +88,7 @@
     const grandTotal = total + shipping;
 
     const waLines = items.map(p => `• ${p.name} x${p.qty} — ${CURRENCY}${(p.price * p.qty).toLocaleString()}`).join("%0A");
-    const waMsg = `Hi Zeenat! I'd like to order:%0A${waLines}%0A%0ATotal: ${CURRENCY}${grandTotal.toLocaleString()}`;
+    const waMsg = `Hi Zivra! I'd like to order:%0A${waLines}%0A%0ATotal: ${CURRENCY}${grandTotal.toLocaleString()}`;
     const waHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}`;
 
     root.innerHTML = `

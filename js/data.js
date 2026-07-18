@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ZEENAT — Product & Category Data
+   Zivra — Product & Category Data
    --------------------------------------------------------------------------
    Yahan par aap apni asli products add/edit/remove kar sakte hain.
    Har product object mein ye fields hain:
