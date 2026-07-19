@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   footer.innerHTML = `
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-logo">Zee<span>nat</span></div>
+        <div class="footer-logo">Ziv<span>ra</span></div>
         <p>Premium artificial jewellery for everyday wear — earrings, rings, pendants, bracelets & bridal sets, delivered across Pakistan.</p>
         <div class="social-row">
           <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener">
