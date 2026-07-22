@@ -29,7 +29,7 @@ const CATEGORIES = [
 
 const PRODUCTS = [
   { id: 1,  name: "Noor-e-Zar Jhumkas",     category: "earrings",  price: 1890, oldPrice: 2400, type: "earring",  tone: "gold",  badge: "Sale", desc: "Antique gold-toned jhumkis with delicate filigree work — light enough for all-day wear.", image: "images/noor-e-zar-jhumkas.webp" },
-  { id: 2,  name: "Layla Pearl Drop Earrings",      category: "earrings",  price: 1550, oldPrice: 0,    type: "earring",  tone: "silver",badge: "New",  desc: "Freshwater-style pearl drops on a rhodium-plated hook.", image: "" },
+  { id: 2,  name: "Layla Pearl Drop Earrings",      category: "earrings",  price: 1550, oldPrice: 0,    type: "earring",  tone: "silver",badge: "New",  desc: "Freshwater-style pearl drops on a rhodium-plated hook.", image: "images/pearl-drops-earings.webps" },
   { id: 3,  name: "Rania Kundan Studs",             category: "earrings",  price: 1290, oldPrice: 0,    type: "earring",  tone: "rose",  badge: "",     desc: "Hand-set kundan stones in a compact stud silhouette.", image: "" },
   { id: 4,  name: "Noor Solitaire Ring",            category: "rings",     price: 990,  oldPrice: 1300, type: "ring",     tone: "silver",badge: "Sale", desc: "A single cubic zirconia stone on a slim adjustable band.", image: "" },
   { id: 5,  name: "Zoya Stackable Band",             category: "rings",     price: 750,  oldPrice: 0,    type: "ring",     tone: "gold",  badge: "",     desc: "Thin stackable band, perfect worn alone or layered.", image: "" },
